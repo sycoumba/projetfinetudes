@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from thememinister.com/health/add-patient.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Aug 2019 16:09:45 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Clinique Dentaire Kadiata Demba SARR</title>
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="{% static 'assets/dist/img/ico/favicon.png' %}" type="image/x-icon">
+
+        <!-- Start Global Mandatory Style
+        =====================================================================-->
+        <!-- jquery-ui css -->
+        <link href="{% static 'assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap -->
+        <link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap rtl -->
+        <!--<link href="assets/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>-->
+        <!-- Lobipanel css -->
+        <link href="{% static 'assets/plugins/lobipanel/lobipanel.min.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- Pace css -->
+        <link href="{% static 'assets/plugins/pace/flash.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- Font Awesome -->
+        <link href="{% static 'assets/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- Pe-icon -->
+        <link href="{% static 'assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap-wysihtml5 css -->
+        <link href="{% static 'assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- Themify icons -->
+        <link href="{% static 'assets/themify-icons/themify-icons.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- End Global Mandatory Style
+        =====================================================================-->
+        <!-- Start Theme Layout Style
+        =====================================================================-->
+        <!-- Theme style -->
+        <link href="{% static 'assets/dist/css/stylehealth.min.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- Theme style rtl -->
+        <!--<link href="assets/dist/css/stylehealth-rtl.css" rel="stylesheet" type="text/css"/>-->
+        <!-- End Theme Layout Style
+        =====================================================================-->
+    </head>
+    <body class="hold-transition sidebar-mini">
+      
+        <!-- Site wrapper -->
+        <div class="wrapper">
+           <header class="main-header">
+            
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top ">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <!-- Sidebar toggle button-->
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="fa fa-tasks"></span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- Notifications -->
+                       
+                        <ul class="dropdown-menu">
+                            
+                                        <!-- user -->
+                                        <li class="dropdown dropdown-user admin-user">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+                                                <div class="user-image">
+                                                    <img src="{% static 'assets/dist/img/avatar4.png' %}" class="img-circle" height="40" width="40" alt="User Image">
+                                                </div>
+                                            </a>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </header>
+                        <!-- =============================================== -->
+                        <!-- Left side column. contains the sidebar -->
+                        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                            <!-- sidebar -->
+                            <div class="sidebar">
+                                <!-- Sidebar user panel -->
+                                <div class="user-panel">
+                                    <div class="image pull-left">
+                                        <img src="{% static 'assets/dist/img/dentaire.jpg' %}" class="img-circle" height="40" width="70" alt="User Image">
+                                    </div>
+                                    <div class="info">
+                                        <h4>Bienvenue</h4>
+                                        <p>Mr. A.SY</p>
+                                    </div>
+                                </div>
+
+                                <!-- sidebar menu -->
+                                <ul class="sidebar-menu">
+                                    <li class="active">
+                                        <a href=""><i class="fa fa-hospital-o"></i><span>Tableau de bord</span>
+                                        </a>
+                                    </li>
+                                   
+                                    <li class="treeview">
+                                        <a href="#">
+                                            <i class="fa fa-user"></i><span>Patient</span>
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            <li><a href="{% url 'add' %}">Ajouter Patient</a></li>
+                                            <li><a href="{% url 'liste' %}">Liste Patient</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="treeview">
+                                        <a href="#">
+                                            <i class="fa fa-user"></i><span>RDV</span>
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            <li><a href="{% url 'addrdv' %}">Ajouter RDV</a></li>
+                                            <li><a href="{% url 'listerdv' %}">Liste RDV</a></li>
+                                        </ul>
+                                    </li>
+                        
+                                
+                                <li class="treeview">
+                                    <a href="#">
+                                        <i class="fa fa-file-text-o"></i><span>Dossier Medical</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="">Ajouter Dossier</a></li>
+                                        <li><a href="">liste Dossiers</a></li>
+                                    </ul>
+                            
+                        </li>
+                       <!-- /.sidebar -->
+            </aside><!-- /.asode -->
+            <!-- =============================================== -->
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    {% block contenu %}
+                    {% endblock %}
+                </section>
+                <!-- Main content -->
+               
+                                   
+             
+         </section> <!-- /.content -->
+     </div> <!-- /.content-wrapper -->
+     <footer class="main-footer">
+        
+        <strong>Copyright &copy; 2021-2022 <a href="#">sycoumba193@gmailcom</a>.</strong> All rights reserved.
+    </footer>
+</div> <!-- ./wrapper -->
+        <!-- Start Core Plugins
+        =====================================================================-->
+        <!-- jQuery -->
+        <script src="{% static 'assets/plugins/jQuery/jquery-1.12.4.min.js' %}" type="text/javascript"></script>
+        <!-- jquery-ui --> 
+        <script src="{% static 'assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js' %}" type="text/javascript"></script>
+        <!-- Bootstrap -->
+        <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+        <!-- lobipanel -->
+        <script src="{% static 'assets/plugins/lobipanel/lobipanel.min.js' %}" type="text/javascript"></script>
+        <!-- Pace js -->
+        <script src="{% static 'assets/plugins/pace/pace.min.js' %}" type="text/javascript"></script>
+        <!-- SlimScroll -->
+        <script src="{% static 'assets/plugins/slimScroll/jquery.slimscroll.min.js' %}" type="text/javascript"></script>
+        <!-- FastClick -->
+        <script src="{% static 'assets/plugins/fastclick/fastclick.min.js' %}" type="text/javascript"></script>
+        <!-- Hadmin frame -->
+        <script src="{% static 'assets/dist/js/custom1.js' %}" type="text/javascript"></script>
+        
+        <!-- End Core Plugins
+        =====================================================================-->
+        <!-- Start Theme label Script
+        =====================================================================-->
+        <!-- Dashboard js -->
+        <script src="{% static 'assets/dist/js/custom.js' %}" type="text/javascript"></script>
+        <!-- End Theme label Script
+        =====================================================================-->
+        
+    </body>
+    
+
+</html>

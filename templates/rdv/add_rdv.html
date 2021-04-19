@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+{% block contenu %}
+<div>
+<h4><a href="{% url 'add' %}">Ajouter Rendez-Vous</a></h4>
+<div class="panel-body">
+    <form class="col-sm-6">
+          
+        <div class="form-group">
+              <label>Nom</label>
+              <input type="text" class="form-control" placeholder="Entrer le Nom" required>
+          </div>
+          <div class="form-group">
+              <label>Prenom</label>
+              <input type="text" class="form-control" placeholder="Entrer le prenom" required>
+          </div>
+                                    
+
+    <div class="form-group">
+      <label>Date Rendez-Vous</label>
+      <input type="date" class="form-control" placeholder="Entrer le prenom" required>
+     
+  </div> 
+  <div class="reset-button">
+   <a href="#" class="btn btn-warning">Retour</a>
+   <a href="" class="btn btn-success">Enregistrer</a>
+</div>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block contenu %}
+<br>
+<div class="cold-md-7">
+     
+    <div class="card card-body">
+        <a class="btn btn-primary" btn-sm btn-block href="">Liste des Rendez-Vous </a>
+        <hr>
+        <table class="table table-sm">
+             <tr>
+                   <th>Patient</th>
+                   <th>Date </th>
+                   <th>Mise à Jour</th>
+                   <th>Supprimer</th>
+            </tr>
+             {% for rdv in rdv %}
+              <tr>
+                 <th>{{rdv.patient}}</th>
+                    <th>{{rdv.date_rdv}}</th>
+                   <th><a href=""> Mettre à Jour</a> </th>
+                   <th><a href="">Supprimer</a></th>
+            </tr>
+                {% endfor %}
+         </table>
+</div>
+</div>
+{% endblock %}
