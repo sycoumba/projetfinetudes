@@ -10,7 +10,6 @@
         <table class="table table-sm">
             <tr>
                    <th>ID</th>
-                   <th>Patient</th>
                    <th>Nom</th>
                    <th>Prenom</th> 
                    <th>telephone</th>
@@ -20,7 +19,7 @@
      </tr>
                 {% for patient in patients %}
                <tr>
-                <th> <a href="{% url 'patient' %}"> {{patient.id}} </a></th> 
+                <th> {{patient.id}}</th> 
                   <th> {{patient.nom}} </th>
                  <th> {{patient.prenom}} </th> 
                  <th> {{patient.telephone}} </th>

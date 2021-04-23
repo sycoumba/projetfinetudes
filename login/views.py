@@ -1,4 +1,3 @@
-import patient
 from django.shortcuts import render
 from rdv.models import Rdv
 from patient.models import Patient
@@ -8,6 +7,6 @@ def connexion(request):
 
 def home(request):
     rdv = Rdv.objects.all()
-    # patient = Patient.objects.all()
-    context = {'rdv':rdv }
+    patients = Patient.objects.all()
+    context = {'rdv':rdv , 'patient':patients}
     return render(request, 'acceuil/home.html', context)

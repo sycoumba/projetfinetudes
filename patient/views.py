@@ -1,10 +1,12 @@
-import patient
 from django.db import models
 from django.shortcuts import render, redirect
-from .models import Patient
+from patient.models import Patient
 from patient.forms import PatientForm
-from rdv.models import Rdv
+
+
 # Create your views here.
+
+
 def add_patient(request):
     return render(request, 'patient/add_patient.html')
 
@@ -26,7 +28,7 @@ def insert(request):
         
         
         
-    ''' form = PatientForm(request.POST)
+''' form = PatientForm(request.POST)
             if form.is_valid():
                 try:
                   form.save()
@@ -41,9 +43,9 @@ def insert(request):
          '''
 
 def liste_patient(request):
-    patients = Patient.objects.all()
-    context = {'patients':patients }
-    return render(request, 'patient/liste_patient.html', context)
+   patients = Patient.objects.all()
+   context = {'patients':patients }
+   return render(request, 'patient/liste_patient.html', context) 
 
 ''' def insert(request):
     if request.method == "POST":
