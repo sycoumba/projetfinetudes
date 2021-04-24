@@ -20,11 +20,26 @@ def insert(request):
         patient.sexe = request.POST.get("sexe")
         patient.adresse = request.POST.get("adresse")
         patient.save()
-        return redirect ('/view')
+        return redirect ('/patient/liste')
     return render(request, 'patient/add_patient.html')
         
         
-        
+def modifier_patient(request, pk):
+    
+    patient = Patient.objects.get(id=pk)
+    
+    if request.method == "POST":
+        patient = Patient()
+        patient.nom = request.POST.get("nom")
+        patient.prenom = request.POST.get("prenom")
+        patient.telephone = request.POST.get("telephone")
+        patient.age = request.POST.get("age")
+        patient.sexe = request.POST.get("sexe")
+        patient.adresse = request.POST.get("adresse")
+        patient.save()
+        return redirect ('/patient/add')
+    return render(request, 'patient/add_patient.html')
+             
         
         
         
