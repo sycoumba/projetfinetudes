@@ -5,15 +5,16 @@
 <div class="panel-body">
     <form action="insert" method="POST" class="col-sm-6">
         {% csrf_token %}
-          
-        <div class="form-group">
-              <label>Nom</label>
-              <input type="text" class="form-control" name="nom" placeholder="Entrer le Nom" required>
-          </div>
+        
           <div class="form-group">
               <label>Prenom</label>
               <input type="text" class="form-control" name="prenom" placeholder="Entrer le prenom" required>
           </div>
+          <div class="form-group">
+            <label>Nom</label>
+            <input type="text" class="form-control" name="nom" placeholder="Entrer le nom" required>
+        </div>
+      
           <div class="form-group">
               <label>Telephone</label>
               <input type="telephone" class="form-control" name="telephone" placeholder="Saisir Telephone" required>
@@ -41,5 +42,5 @@
 </div>
 </form>
 </div>
-bu
+
 {% endblock %}

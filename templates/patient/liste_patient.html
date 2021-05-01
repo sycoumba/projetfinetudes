@@ -17,7 +17,7 @@
                    <th>Sexe</th>
                   <th>Adresse</th>
                   <th>Mise à Jour</th>
-                   <th>Supprimer</th>
+                   <th>Supprimer</th>   
      </tr>
                 {% for patient in patients %}
                <tr>
@@ -29,7 +29,7 @@
                  <th> {{patient.sexe}} </th>
                  <th> {{patient.adresse}} </th>
                  <th><a class="btn btn-sm btn-success" href="{% url 'modifier_patient' patient.id %}"> Modifier</a> </th>
-                 <th><a class="btn btn-sm btn-danger" href=""> Supprimer</a> </th>
+                 <th><a class="btn btn-sm btn-danger" href="{% url 'supprimer_patient' patient.id %}"> Supprimer</a> </th>
             </tr>
                 {% endfor %}
 

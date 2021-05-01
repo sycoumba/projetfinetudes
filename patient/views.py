@@ -1,15 +1,22 @@
 from django.db import models
+from django.http import request
 from django.shortcuts import render, redirect
 from patient.models import Patient
 from patient.forms import PatientForm
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
 
-
+@login_required(login_url='access')
 def add_patient(request):
     return render(request, 'patient/add_patient.html')
 
+def liste_patient(request):
+        patients = Patient.objects.all()
+        context = {'patients':patients }
+        return render(request, 'patient/liste_patient.html', context)
+     
 def insert(request):
     if request.method == "POST":
         patient = Patient()
@@ -25,11 +32,11 @@ def insert(request):
         
         
 def modifier_patient(request, pk):
-    
+    patient = Patient()
     patient = Patient.objects.get(id=pk)
     
     if request.method == "POST":
-        patient = Patient()
+        patient = Patient(instance =patient)
         patient.nom = request.POST.get("nom")
         patient.prenom = request.POST.get("prenom")
         patient.telephone = request.POST.get("telephone")
@@ -40,8 +47,15 @@ def modifier_patient(request, pk):
         return redirect ('/patient/add')
     return render(request, 'patient/add_patient.html')
              
+             
+def supprimer_patient(Patient, pk):
+        patient = Patient()  
+        patient = Patient.objects.get(id=pk)  
+        patient.delete()       
+        #return redirect ('/patient/liste')  
+        return render(request, 'patient/liste_patient.html')
         
-        
+
         
 ''' form = PatientForm(request.POST)
             if form.is_valid():
@@ -57,10 +71,7 @@ def modifier_patient(request, pk):
         
          '''
 
-def liste_patient(request):
-   patients = Patient.objects.all()
-   context = {'patients':patients }
-   return render(request, 'patient/liste_patient.html', context) 
+
 
 ''' def insert(request):
     if request.method == "POST":

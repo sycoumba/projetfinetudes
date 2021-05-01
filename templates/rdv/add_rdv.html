@@ -3,24 +3,16 @@
 <div>
 <h4><a href="{% url 'add' %}">Ajouter Rendez-Vous</a></h4>
 <div class="panel-body">
-    <form class="col-sm-6">
-
+    <!-- <form class="col-sm-6"> -->
+        <form action="insert" method="POST" class="col-sm-6">
+            {% csrf_token %}
+         
+          {} 
           <div class="form-group">
-            <label for="patient-select">Patient:</label>
-            <select class="form-control" name="patient" id="patient">
-                <option value="">Saisir le patient</option>
-            </select>
-        </div>
-       <!--  <div class="form-group">
-              <label>Nom</label>
-              <input type="text" class="form-control" placeholder="Entrer le Nom" required>
+              <label>Patient</label>
+              <input type="text" class="form-control" placeholder="Entrer le Patient" required>
           </div>
-          <div class="form-group">
-              <label>Prenom</label>
-              <input type="text" class="form-control" placeholder="Entrer le prenom" required>
-          </div>
-                 -->                    
-
+                            
     <div class="form-group">
       <label>Date Rendez-Vous</label>
       <input type="date" class="form-control" name="date_rdv" placeholder="date Rendez-Vous" required>
