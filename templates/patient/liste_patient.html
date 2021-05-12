@@ -28,7 +28,7 @@
                  <th> {{patient.age}} </th>
                  <th> {{patient.sexe}} </th>
                  <th> {{patient.adresse}} </th>
-                 <th><a class="btn btn-sm btn-success" href="{% url 'modifier_patient' patient.id %}"> Modifier</a> </th>
+                 <th><a class="btn btn-sm btn-success" href="modifier_patient/{{ patient.id }}"> Modifier</a> </th>
                  <th><a class="btn btn-sm btn-danger" href="{% url 'supprimer_patient' patient.id %}"> Supprimer</a> </th>
             </tr>
                 {% endfor %}

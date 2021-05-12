@@ -4,25 +4,26 @@
 <h4><a href="{% url 'add' %}">Ajouter Patient</a></h4>
 <div class="panel-body">
     <form action="insert" method="POST" class="col-sm-6">
+         <input type="hidden" name="id" id="id" required maxlength="20" value="{{patients.id}}"> 
         {% csrf_token %}
         
           <div class="form-group">
               <label>Prenom</label>
-              <input type="text" class="form-control" name="prenom" placeholder="Entrer le prenom" required>
+              <input type="text" class="form-control" name="prenom" value="{{patients.prenom}}" placeholder="Entrer le prenom" required>
           </div>
           <div class="form-group">
             <label>Nom</label>
-            <input type="text" class="form-control" name="nom" placeholder="Entrer le nom" required>
+            <input type="text" class="form-control" name="nom" value=" {{patients.nom}}" placeholder="Entrer le nom" required>
         </div>
       
           <div class="form-group">
               <label>Telephone</label>
-              <input type="telephone" class="form-control" name="telephone" placeholder="Saisir Telephone" required>
+              <input type="telephone" class="form-control" name="telephone" value=" {{patients.telephone}}" placeholder="Saisir Telephone" required>
           </div>
      
           <div class="form-group">
               <label>Age</label>
-              <input name="age"   class="datepicker form-control hasDatepicker" type="text" placeholder="Entrer l'age">
+              <input name="age"  value="{{patients.age}}" class="datepicker form-control hasDatepicker" type="text" placeholder="Entrer l'age">
           </div>
 
           <div class="form-group">
@@ -34,7 +35,7 @@
 
     <div class="form-group">
       <label>Adresse</label>
-      <textarea name="adresse" class="form-control" rows="3" required></textarea>
+      <input name="adresse"  class="form-control" rows="3" value="{{patients.adresse}}" required>
   </div> 
   <div class="reset-button">
    <a href="#" class="btn btn-warning">Retour</a>

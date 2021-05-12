@@ -32,58 +32,15 @@ def insert(request):
         
         
 def modifier_patient(request, pk):
-    patient = Patient()
-    patient = Patient.objects.get(id=pk)
-    
-    if request.method == "POST":
-        patient = Patient(instance =patient)
-        patient.nom = request.POST.get("nom")
-        patient.prenom = request.POST.get("prenom")
-        patient.telephone = request.POST.get("telephone")
-        patient.age = request.POST.get("age")
-        patient.sexe = request.POST.get("sexe")
-        patient.adresse = request.POST.get("adresse")
-        patient.save()
-        return redirect ('/patient/add')
-    return render(request, 'patient/add_patient.html')
+   # patient = Patient()
+    patients = Patient.objects.get(id=pk)
+    context={'patients':patients}
+    return render(request, 'patient/add_patient.html',context)        
              
-             
-def supprimer_patient(Patient, pk):
+def supprimer_patient(request, pk):
         patient = Patient()  
         patient = Patient.objects.get(id=pk)  
+        #if request.method == "POST":
         patient.delete()       
-        #return redirect ('/patient/liste')  
-        return render(request, 'patient/liste_patient.html')
-        
-
-        
-''' form = PatientForm(request.POST)
-            if form.is_valid():
-                try:
-                  form.save()
-                  return redirect('patient/liste_patient.html')
-                except:
-                    pass
-        
-    else:
-        form = PatientForm()
-    return render(request,'patient/add_patient.html', {'form': form})
-        
-         '''
-
-
-
-''' def insert(request):
-    if request.method == "POST":
-            form = PatientForm(request.POST)
-            if form.is_valid:
-                form.save(commit=False)
-                ip_address = get_patient_ip(request)
-                form.ip = ip_address
-                form.save()
-            else:
-                error= "empty fields"
-                return render(request, 'registration/content.html',{'error': error,'form':form})
-    else:
-            form = RestaurantForm()
-            return render(request, 'registration/content.html',{'form': form}) '''
+        return redirect ('/patient/liste')  
+    #return render(request, 'patient/liste_patient.html')

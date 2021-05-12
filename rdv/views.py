@@ -27,4 +27,18 @@ def liste_rdv(request):
     rdv = Rdv.objects.all()
     context = {'rdv':rdv }
     return render(request,'rdv/liste_rdv.html', context)
+
+def modifier_rdv(request, pk):
+    rdv = rdv()  
+    rdv = rdv.objects.get(id=pk)
+    context={'rdv':rdv}
+    return render(request, 'rdv/add_rdv.html',context)   
+def supprimer_rdv(request, pk):
+        #rdv = rdv()  
+        rdv = rdv.objects.get(id=pk)  
+        rdv.delete()       
+        return redirect ('/rdv/liste')  
+    #return render(request, 'patient/liste_patient.html')
+             
+             
   

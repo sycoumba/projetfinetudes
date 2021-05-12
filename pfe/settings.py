@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rdv',
     'login',
     'compte',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
