@@ -26,16 +26,19 @@ def insert(request):
         patient.age = request.POST.get("age")
         patient.sexe = request.POST.get("sexe")
         patient.adresse = request.POST.get("adresse")
+        print(request.POST)
         patient.save()
         return redirect ('/patient/liste')
     return render(request, 'patient/add_patient.html')
         
         
 def modifier_patient(request, pk):
-   # patient = Patient()
-    patients = Patient.objects.get(id=pk)
-    context={'patients':patients}
-    return render(request, 'patient/add_patient.html',context)        
+        patients = Patient.objects.get(id=pk)
+        context={'patients':patients}
+        patients.save()
+        return render(request, 'patient/add_patient.html',context)   
+        
+ 
              
 def supprimer_patient(request, pk):
         patient = Patient()  

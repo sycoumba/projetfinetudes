@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'rdv',
     'login',
     'compte',
+    'dossier_medical',
+    'sms',
     'django_filters',
 ]
 

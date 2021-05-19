@@ -18,9 +18,9 @@
             </tr>
              {% for rdv in rdv %}
               <tr>
-                <th> {{rdv.id}}</th> 
+                    <th> {{rdv.id}}</th> 
                     <th>{{rdv.patient}}</th>
-                    <th>{{rdv.date}}</th>
+                    <th>{{rdv.date_rdv}}</th>
                     <th>{{rdv.soins}}</th>
                    <th><a class="btn btn-sm btn-success" href="{% url 'modifier_rdv' rdv.id %}"> Modifier</a> </th>
                    <th><a class="btn btn-sm btn-danger" href="{% url 'supprimer_rdv' rdv.id %}"> Supprimer</a> </th>

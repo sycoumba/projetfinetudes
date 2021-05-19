@@ -74,7 +74,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <span>Salut, {{request.user}} </span>
+                                <iv class="nav-item dropdown no-arrow">
+                                <span style="color: #2A3F54;">Salut, {{request.user}} </span>
                                 <span><a style="color: white; text-align:right ;"  href="{% url 'quitter' %}">Deconnexion</a></span>
                             </nav>
                         </header>
@@ -89,7 +90,7 @@
                                         <img src="{% static 'assets/dist/img/dentaire.jpg' %}" class="img-circle" height="40" width="70" alt="User Image">
                                     </div>
                                     <div class="info">
-                                        <h4>Bienvenue</h4>
+                                        <h4 style="color: #2A3F54;">Bienvenue</h4>
                                         <p>Docteur.A.SY</p>
                                     </div>
                                 </div>
@@ -97,46 +98,46 @@
                                 <!-- sidebar menu -->
                                 <ul class="sidebar-menu">
                                     <li class="active">
-                                        <a href=""><i class="fa fa-hospital-o"></i><span>Tableau de bord</span>
+                                        <a href="{% url 'accueil' %}"><i class="fa fa-hospital-o"></i><span>Tableau de bord</span>
                                         </a>
                                     </li>
                                    
                                     <li class="treeview">
                                         <a href="#">
-                                            <i class="fa fa-user"></i><span>Patient</span>
+                                            <i class="fa fa-user"></i><span style="color: #009688;">Patient</span>
                                             <span class="pull-right-container">
                                                 <i class="fa fa-angle-left pull-right"></i>
                                             </span>
                                         </a>
                                         <ul class="treeview-menu">
-                                            <li><a href="{% url 'add' %}">Ajouter Patient</a></li>
-                                            <li><a href="{% url 'liste' %}">Liste Patient</a></li>
+                                            <li><a style="color: #009688;" href="{% url 'add' %}">Ajouter Patient</a></li>
+                                            <li><a style="color: #009688;" href="{% url 'liste' %}">Liste Patient</a></li>
                                         </ul>
                                     </li>
                                     <li class="treeview">
                                         <a href="#">
-                                            <i class="fa fa-user"></i><span>RDV</span>
+                                            <i class="fa fa-user"></i><span style="color: #009688;">RDV</span>
                                             <span class="pull-right-container">
                                                 <i class="fa fa-angle-left pull-right"></i>
                                             </span>
                                         </a>
                                         <ul class="treeview-menu">
-                                            <li><a href="{% url 'addrdv' %}">Ajouter RDV</a></li>
-                                            <li><a href="{% url 'listerdv' %}">Liste RDV</a></li>
+                                            <li><a style="color: #009688;" href="{% url 'addrdv' %}">Ajouter RDV</a></li>
+                                            <li><a style="color: #009688;" href="{% url 'listerdv' %}">Liste RDV</a></li>
                                         </ul>
                                     </li>
                         
                                 
                                 <li class="treeview">
                                     <a href="#">
-                                        <i class="fa fa-file-text-o"></i><span>Dossier Medical</span>
+                                        <i class="fa fa-file-text-o"></i><span style="color: #009688;">Dossier Medical</span>
                                         <span class="pull-right-container">
                                             <i class="fa fa-angle-left pull-right"></i>
                                         </span>
                                     </a>
                                     <ul class="treeview-menu">
-                                        <li><a href="">Ajouter Dossier</a></li>
-                                        <li><a href="">liste Dossiers</a></li>
+                                        <li><a style="color: #009688;" href="{% url 'add_dossier' %}">Ajouter Dossier</a></li>
+                                        <li><a style="color: #009688;" href="{% url 'liste_dossier' %}">liste Dossiers</a></li>
                                     </ul>
                             
                         </li>
@@ -158,7 +159,7 @@
      </div> <!-- /.content-wrapper -->
      <footer class="main-footer">
         
-        <strong>Copyright &copy; 2021-2022 <a href="#">sycoumba193@gmailcom</a>.</strong> All rights reserved.
+        <strong>Realisé par Coumba SY &copy; 2021-2022 <a href="#">sycoumba193@gmailcom</a>.</strong> Tous droits réservés.
     </footer>
 </div> <!-- ./wrapper -->
         <!-- Start Core Plugins

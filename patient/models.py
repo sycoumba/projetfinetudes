@@ -15,6 +15,6 @@ class Patient(models.Model):
    
     def __str__(self):
     
-      return self.nom + ", " + self.prenom
+      return self.nom + " " + self.prenom
 
     
