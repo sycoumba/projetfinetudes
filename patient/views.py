@@ -13,30 +13,32 @@ def add_patient(request):
     return render(request, 'patient/add_patient.html')
 
 def liste_patient(request):
-        patients = Patient.objects.all()
-        context = {'patients':patients }
+        patient = Patient.objects.all()
+        context = {'patient':patient }
         return render(request, 'patient/liste_patient.html', context)
      
 def insert(request):
+    form = PatientForm()
     if request.method == "POST":
-        patient = Patient()
-        patient.nom = request.POST.get("nom")
-        patient.prenom = request.POST.get("prenom")
-        patient.telephone = request.POST.get("telephone")
-        patient.age = request.POST.get("age")
-        patient.sexe = request.POST.get("sexe")
-        patient.adresse = request.POST.get("adresse")
-        print(request.POST)
-        patient.save()
-        return redirect ('/patient/liste')
-    return render(request, 'patient/add_patient.html')
+        form = PatientForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect ('/patient/liste')
+    context={'form':form}
+    return render(request, 'patient/add_patient.html', context)
+ 
         
         
 def modifier_patient(request, pk):
-        patients = Patient.objects.get(id=pk)
-        context={'patients':patients}
-        patients.save()
-        return render(request, 'patient/add_patient.html',context)   
+    patient= Patient.objects.get(id=pk)
+    form = PatientForm(instance=Patient)
+    if request.method == "POST":
+        form = PatientForm(request.POST,instance=Patient)   
+        if form.is_valid():  
+            form.save()
+        return redirect('/patient/liste')
+    context={'form':form}
+    return render(request, 'patient/modifier_patient.html',context)   
         
  
              

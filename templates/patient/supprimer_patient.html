@@ -1,0 +1,13 @@
+ {% extends 'main.html' %}
+{% block contenu %}
+
+<p>Voulez-vous supprimer cette {{ patient }}?</p>
+<form action="supprimer_patient" method="post">
+
+{csrf_token}
+<a class="btn btn-warning" href="{% url 'liste' %}"></a>
+<input class="btn btn-danger" type="submit" name="Confirmer">
+
+</form>
+
+{% endblock %} 
