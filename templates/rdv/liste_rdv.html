@@ -2,7 +2,7 @@
 {% block contenu %}
 <br>
 <div class="cold-md-7">
-     
+
     <div class="card card-body">
         <a class="btn btn-primary" btn-sm btn-block href="">Liste des Rendez-Vous </a>
         <hr>
@@ -14,13 +14,14 @@
                    <th>Soins </th>
                    <th>Mise à Jour</th>
                    <th>Supprimer</th>
-                   
+
             </tr>
              {% for rdv in rdv %}
               <tr>
-                    <th> {{rdv.id}}</th> 
+                    <th> {{rdv.id}}</th>
                     <th>{{rdv.patient}}</th>
-                    <th>{{rdv.date_rdv}}</th>
+                    <!--Pick the right way of formatting the date -->
+                    <th>{{rdv.date_rdv|date:'Y-m-d H:i'}}</th>
                     <th>{{rdv.soins}}</th>
                    <th><a class="btn btn-sm btn-success" href="{% url 'modifier_rdv' rdv.id %}"> Modifier</a> </th>
                    <th><a class="btn btn-sm btn-danger" href="{% url 'supprimer_rdv' rdv.id %}"> Supprimer</a> </th>
