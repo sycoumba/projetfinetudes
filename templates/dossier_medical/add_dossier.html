@@ -1,139 +1,321 @@
 {% extends 'main.html' %}
 {% block contenu %}
 <h2>Dossier Patient</h2>
-
-<h4 style="color: #2A3F54 ; margin-right:10 ;">PASSE MEDICAL:</h4>
-<div class="container">
-        <section>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-                Problémes Cardiaques
-            </label>
-
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                <label style="color: #2A3F54 ;" class="form-check-label" for="defaultCheck2">
-                    Problémes endocriniens
-                </label>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                        Problémes nerveux
-                    </label>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                        <label class="form-check-label" for="defaultCheck2">
-                            Problémes rénaux
-                        </label>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                            <label class="form-check-label" for="defaultCheck2">
-                                Problémes sanguins
-                            </label>
-    </section>
-   
-        <section>
-            <!-- <h3 style="color: #2A3F54 ;">ALLERGIES</h3> -->
-
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                    Affection Hépatiques
-                </label>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                    <label style="color: #2A3F54 ;" class="form-check-label" for="defaultCheck2">
-                        Anemie
-                    </label>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                            Asthme
-                        </label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                            <label class="form-check-label" for="defaultCheck2">
-                                Diabéte
-                            </label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                                <label class="form-check-label" for="defaultCheck2">
-                                    Epilepsie
-                                </label>
-                            </div>
-                        </section>
-                        <div class="flex">
-                            <section>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                     Pneumonie
-                        </label>
-                     
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                        <label style="color: #2A3F54 ;" class="form-check-label" for="defaultCheck2">
-                            Rhumatismes
-                        </label>
-                      
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                       Tuberculose
-                        </label>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                        <label class="form-check-label" for="defaultCheck2">
-                         ............                                                                                                                                                                                                                                                                       
-                        </label>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                        <label class="form-check-label" for="defaultCheck2">
-                         ............
-                        </label>
+   <!-- Main content -->
+   <section class="content">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="panel panel-bd lobidisable">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <!-- <h4>Minimal skin</h4> -->
+                        <h4 style="color: #2A3F54 ; margin-right:10 ;">PASSE MEDICAL:</h4>
                     </div>
+                </div>
+                <div class="panel-body">
+                    <div class="skin-minimal">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="i-check">
+                                    <input tabindex="5" type="checkbox" id="minimal-checkbox-1">
+                                    <label for="minimal-checkbox-1"> Problémes Cardiaques</label>
+                                </div>
+                                <div class="i-check">
+                                    <input tabindex="6" type="checkbox" id="minimal-checkbox-2" checked>
+                                    <label for="minimal-checkbox-2">Problémes endocriniens</label>
+                                </div>
+                                <div class="i-check">
+                                    <input tabindex="5" type="checkbox" id="minimal-checkbox-1">
+                                    <label for="minimal-checkbox-1">  Problémes nerveux</label>
+                                </div>
+                                <div class="i-check">
+                                    <input tabindex="6" type="checkbox" id="minimal-checkbox-2" checked>
+                                    <label for="minimal-checkbox-2">Problémes rénaux</label>
+                                </div>
+                                <div class="i-check">
+                                    <input tabindex="5" type="checkbox" id="minimal-checkbox-1">
+                                    <label for="minimal-checkbox-1"> Problémes sanguins</label>
+                                </div>
+                            </div>
+                           <!--  <div class="col-sm-6">
+                                <div class="i-check">
+                                    <input tabindex="7" type="radio" id="minimal-radio-1" name="minimal-radio">
+                                    <label for="minimal-radio-1">Radio button 1</label>
+                                </div>
+                                <div class="i-check">
+                                    <input tabindex="8" type="radio" id="minimal-radio-2" name="minimal-radio" checked>
+                                    <label for="minimal-radio-2">Radio button 2</label>
+                                </div>
+                                <div class="i-check">
+                                    <input type="radio" id="minimal-radio-disabled" disabled>
+                                    <label for="minimal-radio-disabled">Disabled</label>
+                                </div>
+                                <div class="i-check">
+                                    <input type="radio" id="minimal-radio-disabled-checked" checked disabled>
+                                    <label for="minimal-radio-disabled-checked">Disabled &amp; checked</label>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h4 style="color: #2A3F54 ; margin-right:10 ;">ALLERGIES:</h4>  
+        <div class="col-sm-12 col-md-6">
+            <div class="panel panel-bd lobidisable">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <!-- <h4>Square skin</h4> -->
+                        <h4 style="color: #2A3F54 ;">ALLERGIES</h4>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="skin-square">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="i-check">
+                                    <input tabindex="9" type="checkbox" id="square-checkbox-1">
+                                    <label for="square-checkbox-1">Antibiotique</label>
+                                </div>
+                                <div class="i-check">
+                                    <input tabindex="10" type="checkbox" id="square-checkbox-2" checked>
+                                    <label for="square-checkbox-2">Anesthésiques Locaux</label>
+                                </div>
+                                
+                                <div class="i-check">
+                                    <input tabindex="10" type="checkbox" id="square-checkbox-2" checked>
+                                    <label for="square-checkbox-2">Aspirine</label>
+                                </div>
+                                <div class="i-check">
+                                    <input tabindex="9" type="checkbox" id="square-checkbox-1">
+                                    <label for="square-checkbox-1">Barbituriques</label>
+                                </div>
+                                <div class="i-check">
+                                    <input tabindex="10" type="checkbox" id="square-checkbox-2" checked>
+                                    <label for="square-checkbox-2">Divers iodé-IM.A.O</label>
+                                </div>
+                               
+                            </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="panel panel-bd lobidisable">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <h4>Flat skin</h4>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="skin-flat">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="i-check">
+                                    <input tabindex="13" type="checkbox" id="flat-checkbox-1">
+                                    <label for="flat-checkbox-1">Checkbox 1</label>
+                                </div>
+                                <div class="i-check">
+                                    <input tabindex="14" type="checkbox" id="flat-checkbox-2" checked>
+                                    <label for="flat-checkbox-2">Checkbox 2</label>
+                                </div>
+                                <div class="i-check">
+                                    <input type="checkbox" id="flat-checkbox-disabled" disabled>
+                                    <label for="flat-checkbox-disabled">Disabled</label>
+                                </div>
+                                <div class="i-check">
+                                    <input type="checkbox" id="flat-checkbox-disabled-checked" checked disabled>
+                                    <label for="flat-checkbox-disabled-checked">Disabled &amp; checked</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="i-check">
+                                    <input tabindex="15" type="radio" id="flat-radio-1" name="flat-radio">
+                                    <label for="flat-radio-1">Radio button 1</label>
+                                </div>
+                                <div class="i-check">
+                                    <input tabindex="16" type="radio" id="flat-radio-2" name="flat-radio" checked>
+                                    <label for="flat-radio-2">Radio button 2</label>
+                                </div>
+                                <div class="i-check">
+                                    <input type="radio" id="flat-radio-disabled" disabled>
+                                    <label for="flat-radio-disabled">Disabled</label>
+                                </div>
+                                <div class="i-check">
+                                    <input type="radio" id="flat-radio-disabled-checked" checked disabled>
+                                    <label for="flat-radio-disabled-checked">Disabled &amp; checked</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="panel panel-bd lobidisable">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <h4>Line skin</h4>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="skin-line">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="i-check">
+                                    <input tabindex="17" type="checkbox" id="line-checkbox-1">
+                                    <label for="line-checkbox-1">Checkbox 1</label>
+                                </div>
+                                <div class="i-check">
+                                    <input tabindex="18" type="checkbox" id="line-checkbox-2" checked>
+                                    <label for="line-checkbox-2">Checkbox 2</label>
+                                </div>
+                                <div class="i-check">
+                                    <input type="checkbox" id="line-checkbox-disabled" disabled>
+                                    <label for="line-checkbox-disabled">Disabled</label>
+                                </div>
+                                <div class="i-check">
+                                    <input type="checkbox" id="line-checkbox-disabled-checked" checked disabled>
+                                    <label for="line-checkbox-disabled-checked">Disabled &amp; checked</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="i-check">
+                                    <input tabindex="19" type="radio" id="line-radio-1" name="line-radio">
+                                    <label for="line-radio-1">Radio button 1</label>
+                                </div>
+                                <div class="i-check">
+                                    <input tabindex="20" type="radio" id="line-radio-2" name="line-radio" checked>
+                                    <label for="line-radio-2">Radio button 2</label>
+                                </div>
+                                <div class="i-check">
+                                    <input type="radio" id="line-radio-disabled" disabled>
+                                    <label for="line-radio-disabled">Disabled</label>
+                                </div>
+                                <div class="i-check">
+                                    <input type="radio" id="line-radio-disabled-checked" checked disabled>
+                                    <label for="line-radio-disabled-checked">Disabled &amp; checked</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-bd lobidisable">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <h4>Toggle demo</h4>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="m-t-0">Basic example</h4>
+                            <p>Simply add <code>data-toggle="toggle"</code> to convert checkboxes into toggles.</p>
+                            <input type="checkbox" checked data-toggle="toggle">
 
-        <div class="form-group">
-            <label for="selection">Selectionner une Option:</label>
-            <select class="form-control" id="sel1">
-              <option> Antibiotique</option>
-              <option> Anesthésiques Locaux(Novo-Xylo?)</option>
-              <option> Aspirine</option>
-              <option> Barbituriques   </option>
-              <option>  Divers iodé-IM.A.O</option>
-            </select>
-          </div> 
-          <h4 style="color: #2A3F54 ; margin-right:10 ;">DIVERS:</h4>                                                                                                                                                                                                                                                                                                                                                                                                                                         
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                height: 100%;
+                            <hr>
+                            <h4 class="m-t-0">Inline Checkboxes</h4>
+                            <p>Refer to Bootstrap <a href="http://getbootstrap.com/css/#forms-controls" target="_blank">Form 
+                                Controls</a> documentation to create inline checkboxes. Simply add <code>data-toggle="toggle"</code> to
+                                a convert checkboxes into toggles.</p>
 
-            }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" checked data-toggle="toggle"> First
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" data-toggle="toggle"> Second
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" data-toggle="toggle"> Third
+                                </label>
 
-            .container {
-                padding: 20px;
-                display: inline-flex;
-            }
-          .low{
-              margin-left: 0px;
-              text-align: left;
-              
-              
-          }
-            
-          
-       
-        </style>
+                                <hr>
+                                <h4 class="m-t-0">Size</h4>
+                                <p>Bootstrap toggle is available in different sizes. Refer to Bootstrap <a href="http://getbootstrap.com/css/#buttons-sizes" target="_blank">Button Sizes</a> documentation for more information.</p>
+                                <div class="toggle-example">
+                                    <input type="checkbox" checked data-toggle="toggle" data-size="large">
+                                    <input type="checkbox" checked data-toggle="toggle" data-size="normal">
+                                    <input type="checkbox" checked data-toggle="toggle" data-size="small">
+                                    <input type="checkbox" checked data-toggle="toggle" data-size="mini">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h4 class="m-t-0">Custom Sizes</h4>
+                                <p>Bootstrap toggle can handle custom sizes by <code>data-width</code> and <code>data-height</code> options.</p>
+                                <div class="toggle-example">
+                                    <input type="checkbox" checked data-toggle="toggle" data-width="100" data-height="75">
+                                    <input type="checkbox" checked data-toggle="toggle" data-height="75">
+                                    <input type="checkbox" checked data-toggle="toggle" data-width="100">
+                                </div>
+                                <hr>
+                                <h4 class="m-t-0">Colors</h4>
+                                <div class="toggle-example">
+                                    <input type="checkbox" checked data-toggle="toggle" data-onstyle="primary">
+                                    <input type="checkbox" checked data-toggle="toggle" data-onstyle="success">
+                                    <input type="checkbox" checked data-toggle="toggle" data-onstyle="info">
+                                    <input type="checkbox" checked data-toggle="toggle" data-onstyle="warning">
+                                    <input type="checkbox" checked data-toggle="toggle" data-onstyle="danger">
+                                    <input type="checkbox" checked data-toggle="toggle" data-onstyle="default">
+                                </div>
+                                <hr>
+                                <h4 class="m-t-0">Colors Mix</h4>
+                                <p>You can style on state as well as the off state.</p>
+                                <div class="toggle-example">
+                                    <input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger">
+                                    <input type="checkbox" checked data-toggle="toggle" data-onstyle="warning" data-offstyle="info">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-2">
+                                <h4 class="m-t-0">Custom Style</h4>
+                                <div class="toggle-example">
+                                    <input type="checkbox" checked data-toggle="toggle" data-style="ios">
+                                    <input type="checkbox" checked data-toggle="toggle" data-style="android" data-onstyle="info">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-2">
+                                <h4 class="m-t-0">Custom Text</h4>
+                                <div class="toggle-example">
+                                    <input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-2">
+                                <h4 class="m-t-0">Icons/Html Text</h4>
+                                <div class="toggle-example">
+                                    <input type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> Play" data-off="<i class='fa fa-pause'></i> Pause">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <h4 class="m-t-0">Multiple Lines of Text</h4>
+                                <div class="toggle-example">
+                                    <input type="checkbox" checked data-toggle="toggle" data-on="Hello<br>World" data-off="Goodbye<br>World">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3">
+                                <h4 class="m-t-0">Animation Speed</h4>
+                                <div class="toggle-example">
+                                    <input type="checkbox" checked data-toggle="toggle" data-style="slow">
+                                    <input type="checkbox" checked data-toggle="toggle" data-class="fast">
+                                    <input type="checkbox" checked data-toggle="toggle" data-style="quick">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- /.content -->
 
 
 
