@@ -1,14 +1,15 @@
-''' from django.db import models
+from django.db import models
 from twilio.rest import Client
 
 # Create your models here.
 
-class Sms(models.Model):
+""" class Sms(models.Model):
     
 
     class Meta:
-     db_table = "rdv"
-     def save(self,*args, **kwargs):
+     db_table = "sms" """
+     
+def send_sms():
             account_sid = "ACbc0fdde455335f94a26c110a89ef1d5b"
             auth_token = "5940862ed4a9414c94451a8157f0d9ce"
             client = Client(account_sid, auth_token)
@@ -20,7 +21,5 @@ class Sms(models.Model):
                                 to='+221775235100'
                             )
 
-            print(message.sid)
-            return super().save(*args, **kwargs)
          
-      '''
+      
