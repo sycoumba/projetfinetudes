@@ -3,7 +3,7 @@ from rdv.models import Rdv
 from patient.models import Patient
 from rdv.forms import RdvForm
 from django.contrib.auth.decorators import login_required
-
+from rdv.sms import send_sms
 
 # Create your views here.
 @login_required(login_url='access')
@@ -34,6 +34,7 @@ def insert_rdv(request):
         rdv.date_rdv = request.POST.get("date_rdv")
         rdv.soins = request.POST.get("soins")
         rdv.save()
+        send_sms()
     # whatever the scenario, alway redirect to listrdv
     return redirect('/rdv/listerdv')
 

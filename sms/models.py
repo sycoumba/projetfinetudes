@@ -7,8 +7,7 @@ from twilio.rest import Client
     
 
     class Meta:
-     db_table = "sms" """
-     
+     db_table = "sms" 
 def send_sms():
             account_sid = "ACbc0fdde455335f94a26c110a89ef1d5b"
             auth_token = "5940862ed4a9414c94451a8157f0d9ce"
@@ -21,5 +20,6 @@ def send_sms():
                                 to='+221775235100'
                             )
 
-         
+         """
+     
       
