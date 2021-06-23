@@ -23,8 +23,11 @@ def insert(request):
         form = PatientForm(request.POST)
         if form.is_valid():
             form.save()
+            dico =form.cleaned_data
+            print(dico)
             return redirect ('/patient/liste')
     context={'form':form}
+  
     return render(request, 'patient/add_patient.html', context)
  
         

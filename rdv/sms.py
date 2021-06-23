@@ -1,4 +1,5 @@
 from twilio.rest import Client
+#from rdv.models import form
 
 """  def __str__(self):
            return str(self.date_rdv)
@@ -12,8 +13,9 @@ def send_sms():
     client = Client(account_sid, auth_token)
 
     client.api.account.messages.create(
+       #  to=f"form.cleaned_data['telephone']",
         to="+221775235100",
         from_="+19034800294",
-        body='you sucessful register ')
+        body='you are sucessfully register ')
         # return  super().save(*args, ** kwarg)
 print('message send successfully')
