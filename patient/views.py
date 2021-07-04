@@ -41,9 +41,16 @@ def modifier_patient(request, pk):
             form.save()
         return redirect('/patient/liste')
     context={'form':form}
-    return render(request, 'patient/modifier_patient.html',context)   
+    return render(request, 'patient/add_patient.html',context)    
         
- 
+""" def modifier_patient(request, pk):
+    patient= Patient.objects.get(id=pk)
+    # obviously, you also want to retrieve all the patients
+   #patients = Patient.objects.all()
+   # context = {'patients': patients}
+    # it's a better idea to have a template for addition
+    # and another template for modification
+    return render(request,'patient/modifier_patient.html') """
              
 def supprimer_patient(request, pk):
         patient = Patient()  

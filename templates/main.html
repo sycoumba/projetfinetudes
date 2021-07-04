@@ -74,9 +74,11 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <iv class="nav-item dropdown no-arrow">
-                                <span style="color: white;">Salut, {{request.user}} </span>
-                                <span><a style="color: white; text-align:right ;"  href="{% url 'quitter' %}">Deconnexion</a></span>
+                                <div class="nav-item dropdown no-arrow">
+                                <!-- <span style="color: white;">Salut, {{request.user}} </span> -->
+                                
+                                <div style="float: right;">
+                                <span><a style="color: white; text-align:right ;"  href="{% url 'quitter' %}">Deconnexion</a></span></div>
                             </nav>
                         </header>
                         <!-- =============================================== -->

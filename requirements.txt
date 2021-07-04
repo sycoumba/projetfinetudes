@@ -1,0 +1,5 @@
+django==3.2
+gunicorn==20.1.0
+django-filter
+mysqlclient
+twilio

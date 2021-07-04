@@ -1,10 +1,10 @@
-from twilio.rest import Client
+""" from twilio.rest import Client
 #from rdv.models import form
 
-"""  def __str__(self):
-           return str(self.date_rdv)
-     def save(self, *args, **kwarg):
-        if self.date_rdv == {date_rdv -1}: """
+        #def __str__(self):
+         #  return str(self.date_rdv)
+         # def save(self, *args, **kwarg):
+       # if self.date_rdv == {date_rdv -1}: 
 
 def send_sms(): 
     account_sid ="ACbc0fdde455335f94a26c110a89ef1d5b"
@@ -18,4 +18,5 @@ def send_sms():
         from_="+19034800294",
         body='you are sucessfully register ')
         # return  super().save(*args, ** kwarg)
-print('message send successfully')
+#print('message send successfully')
+ """

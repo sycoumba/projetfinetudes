@@ -4,8 +4,17 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import CreerUtilisateur
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from patient.models import Patient
+from rdv.models import Rdv
 
 # Create your views here.
+
+def home(request):
+    patient = Patient.objects.all()
+    rdv = Rdv.objects.all()
+    context = {'patient':patient, 'rdv':rdv }
+    return render(request, 'rdv/liste_rdv.html',context)
+
 def inscriptionPage(request):
     form= CreerUtilisateur()
     if request.method== 'POST': 
@@ -17,9 +26,6 @@ def inscriptionPage(request):
          return redirect('access')
     context={'form':form}
     return render(request,'compte/inscription.html', context)
-
-def home(request):
-    return render(request, 'acceuil/home.html')
 
 def accesPage(request):
     context={}
