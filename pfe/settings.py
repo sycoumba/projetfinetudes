@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'compte',
     'dossier_medical',
     'sms',
-    'django_filters',
+    #'django_filters',
 ]
 
 MIDDLEWARE = [
